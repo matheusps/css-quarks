@@ -1,0 +1,19 @@
+{
+  "name": "css-ninja",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Matheus P. Silva (aka bl4ckd3v)",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-bulk-import": "^1.0.1"
+  },
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp build && gulp gen-docs"
+  }
+}
