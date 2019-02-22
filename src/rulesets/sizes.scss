@@ -1,16 +1,34 @@
-$sizes:(
-    "full": 100,
-    "three-quarter": 75,
-    "half": 50,
-    "quarter": 25,
-);
+/** With percentages 5-5 min-5 max-100 **/
+$percentage: 5;
+$value: 0%;
+@while $percentage <= 100 {
+  .wp-#{$percentage} {
+    width: $value + $percentage;
+  }
+  .mwp-#{$percentage} {
+    max-width: $value + $percentage;
+  }
+  .hp-#{$percentage} {
+    height: $value + $percentage;
+  }
+  .mhp-#{$percentage} {
+    max-height: $value + $percentage;
+  }
+  $percentage: $percentage + 5;
+}
 
-
-@each $id, $size in $sizes {
-    &.has-#{$id}-width {
-        width: #{$size}% !important;
-    }
-    &.has-#{$id}-height {
-        height: #{$size}vh !important;
-    }
+/** With rems 1-1 min-0 max-20 **/
+@for $i from 0 through 20 {
+  .w-#{$i} {
+    width: #{$i}rem;
+  }
+  .mw-#{$i} {
+    max-width: #{$i}rem;
+  }
+  .h-#{$i} {
+    height: #{$i}rem;
+  }
+  .mh-#{$i} {
+    max-height: #{$i}rem;
+  }
 }

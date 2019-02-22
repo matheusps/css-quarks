@@ -1,0 +1,131 @@
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+/** Row **/
+.row {
+  flex-direction: row;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/** Column **/
+.col {
+  flex-direction: column;
+}
+.col-reverse {
+  flex-direction: column-reverse;
+}
+
+/** Wrap **/
+.wrap {
+  flex-wrap: wrap;
+}
+.nowrap {
+  flex-wrap: nowrap;
+}
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/** Justify Content **/
+.jc-start {
+  justify-content: flex-start;
+}
+.jc-end {
+  justify-content: flex-end;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-between {
+  justify-content: space-between;
+}
+.jc-around {
+  justify-content: space-around;
+}
+
+/** Align Items **/
+.ai-start {
+  align-items: flex-start;
+}
+.ai-end {
+  align-items: flex-end;
+}
+.ai-center {
+  align-items: center;
+}
+.ai-baseline {
+  align-items: baseline;
+}
+.ai-stretch {
+  align-items: stretch;
+}
+
+/** Align Content **/
+.ac-start {
+  align-content: flex-start;
+}
+.ac-end {
+  align-content: flex-end;
+}
+.ac-center {
+  align-content: center;
+}
+.ac-between {
+  align-content: space-between;
+}
+.ac-around {
+  align-content: space-around;
+}
+.ac-stretch {
+  align-content: stretch;
+}
+
+/** Align Self **/
+.as-auto {
+  align-self: auto;
+}
+.as-start {
+  align-self: flex-start;
+}
+.as-end {
+  align-self: flex-end;
+}
+.as-center {
+  align-self: center;
+}
+.as-baseline {
+  align-self: baseline;
+}
+.as-stretch {
+  align-self: stretch;
+}
+
+/** Order **/
+.order-first {
+  order: -1;
+}
+@for $i from 0 through 9 {
+  .order-#{$i} {
+    order: #{$i};
+  }
+}
+.order-last {
+  order: 99999;
+}
+
+/** Grow and Shrink on fibonacci sequence 0...21 **/
+@each $i in 0, 1, 2, 3, 5, 8, 13, 21 {
+  .grow-#{$i} {
+    flex-grow: $i;
+  }
+  .shrink-#{$i} {
+    flex-shrink: $i;
+  }
+}

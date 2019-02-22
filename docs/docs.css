@@ -1,0 +1,12 @@
+.container {
+  background-color: rgb(189, 189, 189);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.item {
+  background-color: rgb(226, 226, 226);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-right: 1rem;
+}
